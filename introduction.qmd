@@ -1,0 +1,17 @@
+# Introduction
+
+## Reproducibility
+
+### What is reproducibility?
+
+> A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.
+
+![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807](images/turing-way-reproducible-definition-grid.svg)
+
+### Reproducibility is hard
+
+#### Missing code and data
+
+#### Missing software
+
+#### Missing hardware

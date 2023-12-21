@@ -3,7 +3,7 @@ project:
   execute-dir: project
   output-dir: _book
   preview:
-    port: 4500
+    port: 5690
     host: 127.0.0.1
     browser: true
     watch-inputs: true
@@ -20,8 +20,8 @@ book:
   date-format: "{{< var book.date-format >}}"
   accessed: today
   language: en
-  site-url: "https://lennartwittkuhn.com/quarto-book"
-  repo-url: "https://github.com/lnnrtwttkhn/quarto-book"
+  site-url: "https://lennartwittkuhn.com/docker-book"
+  repo-url: "https://github.com/lnnrtwttkhn/docker-book"
   repo-branch: "main"
   issue-url: "{{< var book.repo-url >}}/issues"
   repo-actions: [edit, source, issue]

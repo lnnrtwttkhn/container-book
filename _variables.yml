@@ -1,7 +1,7 @@
 book:
-  project-name: "quarto-book"
-  title: "Title"
-  subtitle: "Subtitle"
+  project-name: "docker-book"
+  title: "Docker"
+  subtitle: "A guide for scientists"
   author: "Lennart Wittkuhn"
   date-format: "MM-DD-YYYY"
   abstract: |

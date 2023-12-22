@@ -5,5 +5,19 @@
     "title": "Docker",
     "section": "",
     "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "contents.html",
+    "href": "contents.html",
+    "title": "Contents",
+    "section": "",
+    "text": "The estimate of the reading time for each chapter is computed by counting the words in the chapter and assuming a reading speed of 200 words per minute.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Reading Time (Low to High)\n        \n         \n          Reading Time (High to Low)\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "We would like to express our gratitude to the following resources, which have been essential in shaping this online guide. We recommend these references for further reading:\n\n\nAustralian Research Data Commons. 2021. “How Can Software Containers Help Your Research?” https://doi.org/10.5281/ZENODO.5091260. https://www.youtube.com/watch?v=HelrQnm3v4g. License: CC BY 4.0.\n\n\nEyers, D. M., S. L. R. Stevens, A. Turner, C. Koch, and J. Cohen. 2020. “Reproducible Computational Environments Using Containers: Introduction to Docker.” Carpentries Incubator. https://github.com/carpentries-incubator/docker-introduction. Version 2020.09a (4a93bd67aa). License: Instructional Material: CC BY 4.0; Software: MIT.\n\n\nThe Turing Way Community. 2022. “Containers.” In The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research. Zenodo. https://doi.org/10.5281/ZENODO.7625728. https://the-turing-way.netlify.app/reproducible-research/renv/renv-containers.html. License: CC BY 4.0."
   }
 ]

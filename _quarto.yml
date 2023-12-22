@@ -37,8 +37,11 @@ book:
   
   chapters:
     - index.qmd
+    - containers.qmd
 
 format:
   html:
     theme: cosmo
     include-before-body: plausible.html
+    link-external-newwindow: true
+    link-external-icon: false

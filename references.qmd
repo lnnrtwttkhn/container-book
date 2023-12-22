@@ -5,5 +5,8 @@ nocite: |
 
 # References {.unnumbered}
 
+We would like to express our gratitude to the following resources, which have been essential in shaping this online guide.
+We recommend these references for further reading:
+
 ::: {#refs}
 :::

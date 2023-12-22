@@ -37,7 +37,7 @@ book:
   
   chapters:
     - index.qmd
-    - containers.qmd
+    - contents.qmd
     - references.qmd
 
 format:

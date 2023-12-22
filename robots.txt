@@ -1,1 +1,1 @@
-Sitemap: https://lennartwittkuhn.com/docker-book/sitemap.xml
+Sitemap: https://lennartwittkuhn.com/container-book/sitemap.xml

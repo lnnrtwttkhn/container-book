@@ -38,6 +38,7 @@ book:
   chapters:
     - index.qmd
     - containers.qmd
+    - references.qmd
 
 format:
   html:
@@ -45,3 +46,8 @@ format:
     include-before-body: plausible.html
     link-external-newwindow: true
     link-external-icon: false
+    bibliography: references.bib
+    csl: chicago-author-date.csl
+    citations-hover: true
+    citation-location: document
+    citeproc: true

@@ -21,8 +21,8 @@ book:
   accessed: today
   language: en
   favicon: images/docker-logo.svg
-  site-url: "https://lennartwittkuhn.com/docker-book"
-  repo-url: "https://github.com/lnnrtwttkhn/docker-book"
+  site-url: "https://lennartwittkuhn.com/container-book"
+  repo-url: "https://github.com/lnnrtwttkhn/container-book"
   repo-branch: "main"
   issue-url: "{{< var book.repo-url >}}/issues"
   repo-actions: [edit, source, issue]

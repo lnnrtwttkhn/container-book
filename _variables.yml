@@ -1,6 +1,6 @@
 book:
-  project-name: "docker-book"
-  title: "Docker"
+  project-name: "container-book"
+  title: "Containers"
   subtitle: "A guide for scientists"
   author: "Lennart Wittkuhn"
   date-format: "MM-DD-YYYY"

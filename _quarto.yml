@@ -20,6 +20,7 @@ book:
   date-format: "{{< var book.date-format >}}"
   accessed: today
   language: en
+  favicon: images/docker-logo.svg
   site-url: "https://lennartwittkuhn.com/docker-book"
   repo-url: "https://github.com/lnnrtwttkhn/docker-book"
   repo-branch: "main"

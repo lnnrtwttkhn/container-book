@@ -39,8 +39,9 @@ book:
     - index.qmd
     - contents.qmd
     - chapters/containers.qmd
-    - chapters/installation.qmd
     - chapters/command-line.qmd
+    - chapters/docker-installation.qmd
+    - chapters/docker-start.qmd
     - references.qmd
 
 format:

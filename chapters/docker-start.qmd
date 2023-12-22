@@ -1,0 +1,45 @@
+---
+engine: knitr
+execute: 
+  eval: false
+---
+
+# Docker: Start
+
+Open the Docker program you installed by following the [setup instructions](installation.qmd).
+If you're using a Linux laptop or if Docker was set to start automatically during installation, you may not need to do this step.
+
+After starting Docker, open a command line window and type the following command to make sure Docker is installed and its command line tools are working:
+
+```{bash}
+docker --version
+```
+
+This should return an output similar to:
+
+```{bash}
+Docker version 23.0.5, build bc4487a
+```
+
+This is the version as it displayed on macOS.
+If your version is different from the example that's okay, it doesn't need to match exactly.
+
+The command above only checks if Docker is installed and accessible from the command line, not the part that actually runs containers.
+A different command, `docker container ls`, is used to confirm that Docker is working correctly.
+We'll go into more detail about this command later in this guide.
+
+```{bash}
+docker container ls
+```
+
+On a newly installed system, the output would probably be like this:
+
+```{bash}
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+If you see a message like the one below, it means you should ensure that you've started Docker Desktop, Docker Engine, or followed the [setup instructions](docker-installation.qmd) as needed.
+
+```{bash}
+Cannot connect to the Docker daemon at unix:///Users/user/.docker/run/docker.sock. Is the docker daemon running?
+```

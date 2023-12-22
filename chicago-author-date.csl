@@ -200,14 +200,8 @@
       </choose>
       <choose>
         <if type="legal_case" match="none">
-          <choose>
-            <if variable="DOI">
-              <text variable="DOI" prefix="https://doi.org/"/>
-            </if>
-            <else>
-              <text variable="URL"/>
-            </else>
-          </choose>
+            <text variable="DOI" prefix="https://doi.org/"/>
+            <text variable="URL"/>
         </if>
       </choose>
     </group>

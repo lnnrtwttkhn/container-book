@@ -47,7 +47,7 @@ format:
     link-external-newwindow: true
     link-external-icon: false
     bibliography: references.bib
-    csl: chicago-author-date.csl
+    csl: chicago-author-date-note.csl
     citations-hover: true
     citation-location: document
     citeproc: true

@@ -38,6 +38,9 @@ book:
   chapters:
     - index.qmd
     - contents.qmd
+    - chapters/containers.qmd
+    - chapters/installation.qmd
+    - chapters/command-line.qmd
     - references.qmd
 
 format:

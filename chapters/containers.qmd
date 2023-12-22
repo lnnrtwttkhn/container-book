@@ -1,0 +1,110 @@
+# Containers
+
+## Logistics
+
+### Learning objectives
+
+
+### Exercises
+
+
+
+## Why containers?
+
+Even for moderately complex projects, managing software dependencies can be challenging.
+Consider a standard task like generating a report using certain tools.
+Ensuring reproducibility requires not only installing the necessary packages but also maintaining consistency in software versions during runtime.
+
+Instead of navigating these dependencies through a package manager like conda, which depends on having all required software in a single package manager, a more straightforward approach is to capture a snapshot of the entire computing environment, along with all dependencies.
+These self-contained computing environments are commonly known as **containers**.
+
+## Your computer
+
+Before we explain what a container is, let's start by talking about your computer.
+It has some important parts that make it work, like the processor or Central Processing Unit (CPU) (the "brain of the computer"), the amount of memory or RAM (temporary memory for running programs), and the hard drive (for long-term storage).
+These parts work together to make your computer function, even though we usually don't see them.
+
+What we do see on our computer screens are the desktop, program windows, folders, and files.
+All these things are part of the filesystem, where everything on your computer, like programs, pictures, and documents, is stored.
+
+Now, imagine you want to install new software without messing up your current system.
+Instead of buying a new computer, what if you could have a separate system within your existing computer?
+This system would have its own filesystem and operating system, independent of your main computer.
+
+That's where container systems like Docker come in.
+They are special programs on your computer that make it possible to have these independent systems.
+Think of containers like shipping containers – they keep things together that should stay together.
+Similarly, software containers standardize the description and creation of a complete software system.
+You can drop a container into any computer with the right software, and it should work smoothly.
+
+## What are containers?
+
+Containers enable researchers to bundle a project with all its components, including libraries, dependencies, and system settings, into a single package.
+Opening a container allows anyone to work within it, experiencing the project as if their machine matches the container's specifications, irrespective of their actual computational environment.
+
+Containers act like virtual machines, appearing as self-contained systems to the outside world.
+However, unlike virtual machines, they only include specific components required for the project, enhancing performance and reducing application size.
+
+They prove especially beneficial for replicating research that depends on specific software configurations or libraries not universally available.
+In essence, containers offer a more robust method for sharing reproducible research compared to package management systems or Binder, as they replicate the entire research system, not just its explicitly used packages.
+However, their greater complexity makes containers conceptually more challenging to understand and create compared to many other methods of reproducing computational environments.
+
+## What is virtualization?
+
+Containers are a type of virtualization, which means having a second "virtual" computer that runs alongside and can be used from the main computer.
+Another example of virtualization is a virtual machine (VM).
+A virtual machine has a complete copy of an operating system and its own filesystem, and it needs to start up like a regular computer.
+In contrast, a container is like a lightweight version of a virtual machine.
+It mostly uses the Linux kernel and contains a type of Linux along with its filesystem.
+
+## What are images?
+
+Think of a container image as a "recipe" or template for a container.
+It holds all the necessary information to start up a working copy of the container.
+The container image is like a long-lasting definition for the container, while a running container is temporary and can be turned on and off.
+
+Imagine the container image as a cookie cutter.
+It's like the tool you use to create cookies of the same shape.
+The container image, like the cookie cutter, doesn't change much and can be used over and over to make identical containers.
+Just like you need a different cookie cutter for a different cookie shape, you need a different container image for a different type of container.
+
+Images are like the building blocks for containers.
+Instead of people creating images, they write recipes that act like instructions for making images.
+Then, containers are like copies made from these images.
+
+Here's a simple way to think about it:
+
+1. The recipe is a set of instructions written by a person. It has all the steps to create a working version of a project and its environment but doesn't have the actual materials. Think of it like a blueprint.
+1. Making an image is like following that recipe to gather all the necessary packages, software, and configurations and putting them together in a compact package. Imagine it's like assembling flat-pack furniture using the blueprint.
+1. Containers take that image and put together a fully working version of the project and its environment. It's like putting together the flat-pack furniture.
+
+So, if a researcher wants others to redo their work, they write a recipe and use it to make an image of their project.
+They can share this image with anyone who wants to reproduce their work.
+That person can then use the image to create a container with a working version of the project.
+
+## Docker
+
+### What is Docker?
+
+Docker is a tool that allows you to build containers.
+It's not the only tool that can create containers, but is the one weve chosen for this workshop. 
+
+### Alternatives to Docker
+
+There are several tools you can use to create and work with containers.
+We'll focus on Docker, which is widely used, but keep in mind that others like Apptainer, LXC, Podman, and Singularity also exist.
+Apptainer and Singularity are designed for high-performance computing and are well-supported for such systems.
+Podman serves as a free and open-source alternative to Docker, with a compatible command-line interface.
+
+Docker uses "Dockerfiles" as recipe files to generate images, and they should be named `Dockerfile`.
+
+Docker Hub hosts many pre-made images, like Ubuntu machines, which you can download and build upon.
+This simplifies writing Dockerfiles since users usually customize existing images instead of starting from scratch.
+However, this approach can expose users to security issues, as discussed in the Security Issues section:
+
+- Malicious code can be included in Docker images.
+- Image producers may unintentionally include software with security vulnerabilities.
+
+For a more in-depth understanding of container security vulnerabilities, this article provides a detailed breakdown of Docker's current security features.
+The general advice when using images built by others is to download and run from trusted sources.
+Docker Hub identifies commonly used, verified images with "official image" badges.

@@ -43,6 +43,7 @@ book:
     - chapters/command-line.qmd
     - chapters/docker-installation.qmd
     - chapters/docker-start.qmd
+    - chapters/docker-explore.qmd
     - references.qmd
 
 format:

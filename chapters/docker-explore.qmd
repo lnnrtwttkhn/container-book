@@ -1,0 +1,143 @@
+---
+engine: knitr
+execute: 
+  eval: false
+---
+
+# Exploring Docker containers
+
+::: {.callout-tip title="Reminder: Container *image* vs. *container*"}
+Keep in mind that a *container image* acts as a template for creating *individual containers*.
+It contains all the necessary components for an application and ensures consistency when deploying and running containers.
+:::
+
+## The `hello-world` container image
+
+Let's dive into our first Docker container experience.
+The Docker team offers a straightforward container image named `hello-world`, available online.
+The `hello-world` image is a simple and lightweight Docker image that is commonly used to verify that your Docker installation is working correctly.
+It doesn't do much besides printing a message and then exiting.
+We will use the `hello-world` container to explore the steps to run Docker containers.
+
+## Listing Docker images
+
+The `docker image` command helps you work with Docker container images.
+If you want to see what container images you have on your computer, just type this command (`ls` stands for "list"):
+
+```{bash}
+docker image ls
+```
+
+If you've just installed Docker, you won't see any container images listed.
+
+## Downloading Docker images
+
+To download the `hello-world` container image from Docker Hub, open a terminal or command prompt and run the following command:
+
+```{bash}
+docker pull hello-world
+```
+
+This command downloads the latest version of the `hello-world` image from the [official Docker Hub repository](https://hub.docker.com/_/hello-world).
+
+You should see an output like this:
+
+```{bash}
+Using default tag: latest
+latest: Pulling from library/hello-world
+478afc919002: Pull complete 
+Digest: sha256:4bd78111b6914a99dbc560e6a20eab57ff6655aea4a80c50b0c5491968cbc2e6
+Status: Downloaded newer image for hello-world:latest
+docker.io/library/hello-world:latest
+```
+
+::: {.callout-note title="Where did the `hello-world` container image come from?"}
+The `hello-world` container image came from a special website called [Docker Hub]({{< var links.docker-hub >}}).
+Think of Docker Hub as a big sharing place for container images.
+People put their container images there so others can use them.
+We'll dive deeper into this topic in a later chapter.
+:::
+
+It's important to know that the `hello-world` container image you downloaded doesn't show up in the folder you're currently in on the terminal.
+You can run `ls` to check, but it won't be there.
+Unlike regular programs and documents, Docker stores container images in a specific place that we don't usually explore directly.
+To find out which Docker container images you have on your computer, you need to use the special `docker image` command.
+
+## Running Docker images
+
+To create and run containers based on named Docker container images, use the `docker container run` command.
+Try the following `docker container run` example.
+Note that it does not matter what your current working directory is.
+
+Once the `hello-world` image is downloaded, you can run a container from it using the following command:
+
+```{bash}
+docker container run hello-world
+```
+
+Docker will create a container from the `hello-world` image, execute its default command (which is to print a message), and then exit.
+This is what the output will look like:
+
+```{bash}
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+```
+
+If you see the output shown above, this indicates that your Docker installation is properly configured, and you've successfully run your first Docker container.
+Congratulations!
+
+But what happened exactly?
+
+When we execute the `docker container run` command, Docker does three things:
+
+1.    **Starts a Running Container:** Initiates a live instance of the container, essentially bringing it to life and ready for action.
+
+2.    **Performs Default Action:** If the container has a predefined default action, such as displaying a message or executing a specific task, it carries out that default action.
+
+3.    **Shuts Down the Container:** Once the default action concludes, the container stops running or exits.
+While the container image is still there, the active processes within the container stop.
+
+The `hello-world` container is set up to automatically run one default action when it starts: it prints out the message shown above.
+
+::: {.callout-note title="What is the difference between `docker container run` and `docker run`?"}
+In recent versions of Docker, the `docker container` subcommand is optional, and you can use `docker run` directly instead of `docker container run`.
+Both commands are equivalent, and they perform the same actions.
+Docker introduced the `docker container` subcommand to make the command structure more organized and to provide clarity in differentiating between management commands and runtime commands.
+
+So, in modern versions of Docker, you can use either `docker run` or `docker container run`, and both will have the same effect.
+The `docker container` subcommand is there for consistency and to explicitly indicate that you are dealing with container-related actions.
+However, for simplicity, many users still use the shorter form `docker run`.
+:::
+
+::: {.callout-note title="Can I also run `docker container run` directly (before running `docker pull`)?"}
+Yes, we could have avoided pulling the Docker image separately using `docker pull`.
+When you use the `docker container run` command and don't have a copy of the container image yet, Docker takes care of automatically pulling it for you before running it.
+:::
+
+## Cheatsheet
+
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+knitr::kable(table_cheatsheet(name = "explore"), format = "markdown", row.names = FALSE)
+```

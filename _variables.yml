@@ -9,4 +9,5 @@ book:
   site-url: "https://lennartwittkuhn.com/{{< var book.project-name >}}"
   repo-url: "https://github.com/lnnrtwttkhn/{{< var book.project-name >}}"
   issue-url: "{{< var book.repo-url >}}/issues"
-  
+links:
+  docker-hub: "https://hub.docker.com/"

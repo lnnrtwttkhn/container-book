@@ -1,0 +1,9 @@
+# Cheatsheet {.unnumbered}
+
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+knitr::kable(table_cheatsheet(name = "all"), format = "markdown", row.names = FALSE)
+```

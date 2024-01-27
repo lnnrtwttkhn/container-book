@@ -38,6 +38,7 @@ book:
   chapters:
     - index.qmd
     - contents.qmd
+    - chapters/cheatsheet.qmd
     - chapters/containers.qmd
     - chapters/command-line.qmd
     - chapters/docker-installation.qmd
